@@ -4,7 +4,7 @@ A deterministic AI agent that answers queries using verified function tools (ord
 
 ---
 
-## 📝 Written Submission (Required 3–4 Lines)
+## 📝 Written Submission 
 
 > **How we make sure it doesn't make up an answer when it genuinely doesn't have data:**  
 > We enforce strict grounding by decoupling data retrieval from answer synthesis. The agent is governed by system-level constraints and an execution guardrail that only allows facts directly present in the tool's JSON output to appear in the answer. If a tool returns an error, null, or missing record (e.g. non-existent Order ID), or if the query falls outside registered tool capabilities, the agent triggers a deterministic fallback refusal stating that verified data is unavailable, explicitly forbidding extrapolation.
