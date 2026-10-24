@@ -1,0 +1,47 @@
+/* ==========================================
+   Skill First Labs - Sample Stylesheet
+   Demonstrates real-world CSS patterns
+   ========================================== */
+
+:root {
+  --brand-primary: #2563eb;
+  --brand-secondary: #7c3aed;
+  --font-base: 'Roboto', 'Segoe UI', sans-serif;
+  --card-radius: 12px;
+}
+
+/* Base Body Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-base);
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Card Component with multiple selectors & edge-case URL */
+.card, .panel, .widget-container {
+  border-radius: var(--card-radius);
+  background: url('https://assets.example.com/patterns/grid.svg?color=blue;opacity=0.2');
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  /* Missing trailing semicolon test */
+  border: 1px solid #e2e8f0
+}
+
+.button:hover, .button:focus {
+  background-color: var(--brand-secondary);
+  cursor: pointer;
+}
+
+/* Responsive Media Queries (Nested blocks) */
+@media (max-width: 768px) {
+  .card, .panel {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}
