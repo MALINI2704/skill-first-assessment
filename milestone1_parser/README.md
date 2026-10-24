@@ -4,7 +4,7 @@ A lightweight, zero-dependency CSS parser in Python that transforms raw CSS into
 
 ---
 
-## 📝 Written Submission (Required 3–4 Lines)
+## 📝 Written Submission 
 
 > **What we chose to extract and why:**  
 > We extracted normalized rule-sets (individual selectors grouped cleanly as arrays), property-value declaration mappings, recursive at-rules (e.g., `@media`), and an aggregated metadata summary (including detected CSS custom properties `--*`). This enables downstream tools to easily query specific selectors, validate design tokens, calculate specificity, or perform dead-code analysis without dealing with raw string parsing.
